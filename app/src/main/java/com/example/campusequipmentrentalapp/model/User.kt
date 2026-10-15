@@ -3,7 +3,7 @@ package com.example.campusequipmentrentalapp.model
 data class User (
 
     val id: Int,
-    val loginId: String,
+    val userId: String,
     val name: String,
     val department : String,
     val role : UserRole

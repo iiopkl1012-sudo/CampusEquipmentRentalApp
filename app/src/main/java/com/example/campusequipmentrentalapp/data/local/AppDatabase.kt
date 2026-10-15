@@ -8,17 +8,27 @@ import androidx.room.RoomDatabase
 
 
 @Database(
-    entities = [RentalEntity::class],
-    version = 1,
+    entities = [RentalEntity::class, UserEntity::class, EquipmentEntity::class],
+    version = 2,
     exportSchema = false
 )
-
 abstract class AppDatabase : RoomDatabase()
 {
     /**
      * RentalDao 연결 처리
      * */
     abstract fun rentalDao(): RentalDao
+
+    /**
+     * UserDao 연결 처리
+     * */
+    abstract fun userDao(): UserDao
+
+    /**
+     * EquipmentDao 연결 처리
+     * */
+    abstract fun equipmentDao(): EquipmentDao
+
 
     companion object {
         private var instance: AppDatabase? = null

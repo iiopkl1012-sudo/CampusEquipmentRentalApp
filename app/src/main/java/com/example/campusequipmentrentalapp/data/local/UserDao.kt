@@ -1,0 +1,21 @@
+package com.example.campusequipmentrentalapp.data.local
+
+import androidx.room.Dao
+import androidx.room.Insert
+import androidx.room.Query
+
+@Dao
+interface UserDao {
+
+    /** 사용자 추가 */
+    @Insert
+    suspend fun insertUser(userEntity: UserEntity): Long
+
+    /** 모든 사용자 조회 */
+    @Query("SELECT * FROM users ORDER BY id DESC")
+    suspend fun getUsersAll(): List<UserEntity>
+
+    /** 사용자 아이디로 사용자 조회 */
+    @Query("SELECT * FROM users WHERE userId = :userId LIMIT 1")
+    suspend fun getUserId(userId: String): UserEntity?
+}

@@ -65,27 +65,15 @@
             android:padding="18dp">
 
             <TextView
+                android:id="@+id/tv_login_user"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="✓ RecyclerView로 여러 데이터 표시"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/bg_info_panel"
+                android:padding="16dp"
                 android:textColor="@color/text_primary"
                 android:textSize="16sp" />
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:text="✓ Data Class와 Adapter 연결"
-                android:textColor="@color/text_primary"
-                android:textSize="16sp" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:text="✓ Navigation과 Bundle 데이터 전달"
-                android:textColor="@color/text_primary"
-                android:textSize="16sp" />
         </LinearLayout>
 
         <com.google.android.material.button.MaterialButton

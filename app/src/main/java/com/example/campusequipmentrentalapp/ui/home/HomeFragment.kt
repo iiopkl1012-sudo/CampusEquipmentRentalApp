@@ -8,6 +8,8 @@ import android.view.ViewGroup
 import com.example.campusequipmentrentalapp.R
 import com.example.campusequipmentrentalapp.databinding.FragmentHomeBinding
 import androidx.navigation.fragment.findNavController
+import com.example.campusequipmentrentalapp.data.UserSession
+
 
 class HomeFragment : Fragment(R.layout.fragment_home) {
 
@@ -22,6 +24,8 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
         super.onViewCreated(view, savedInstanceState)
 
         _binding = FragmentHomeBinding.bind(view)
+
+        binding.tvLoginUser.text = "${UserSession.currentUser?.name}님 반갑습니다."
 
         binding.btnViewEquipment.setOnClickListener {
             findNavController().navigate(
